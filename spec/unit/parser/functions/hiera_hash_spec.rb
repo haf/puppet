@@ -16,4 +16,9 @@ describe 'Puppet::Parser::Functions#hiera_hash' do
     Hiera.any_instance.expects(:lookup).with() { |*args| args[4].should be :hash }.returns({})
     scope.function_hiera_hash(['key'])
   end
+
+  it 'should work on empty hashes' do
+    Hiera.any_instance.expects(:lookup).returns(nil)
+    scope.function_hiera_hash(["badkey", {}]).should be_equal({})
+  end
 end

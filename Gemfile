@@ -7,6 +7,8 @@ group(:development, :test) do
   gem "rack", "~> 1.4.1", :require => false
   gem "rspec", "~> 2.10.0", :require => false
   gem "mocha", "~> 0.10.5", :require => false
+  gem "rake"
+  gem "hiera"
 end
 
 platforms :mswin, :mingw do

@@ -9,7 +9,6 @@ module HieraPuppet
     unless scope.respond_to?("[]")
       scope = Hiera::Scope.new(scope)
     end
-
     answer = hiera.lookup(key, default, scope, override, resolution_type)
 
     if answer.nil?

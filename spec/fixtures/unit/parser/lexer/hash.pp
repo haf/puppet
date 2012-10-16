@@ -31,3 +31,5 @@ $key = "mykey"
 file {
     $hash3[$key]: ensure => file, content => "content"
 }
+
+$hash4 = {}
